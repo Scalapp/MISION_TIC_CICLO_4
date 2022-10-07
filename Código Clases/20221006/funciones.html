@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<head>
+       <title>Document</title>
+</head>
+<body>
+    <script>
+        var saludo ="hola mundo con js desde el body";
+        var parrafo="Hola soy un párrafo construido desde js";
+        var parrafo3="Hola soy un párrafo construido con queryselector js";
+        window.alert(saludo);
+        function contenido(){
+            document.write(parrafo);
+        }
+        document.querySelector('#parrafoCid').innerHTML =parrafo3;
+    </script>
+    <p>Hola soy un párrafo en html</p>
+    <p>Hola soy un párrafo en html y voy a ser modificado desde js <script>contenido()</script></script></p>
+    <p id="parrafoCid">Párrafo con id</p>
+</body>
+</html>

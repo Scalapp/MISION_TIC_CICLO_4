@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    //acá puede ir mi código js
+    var a=25;
+    var nombre = "Diego";
+    let apellido = "Oliveros";
+    const constante ="variable?";
+    /*
+    Esto es un comentario en javascript de varias líneas
+    */
+    function parrafof(){
+        document.getElementById("parrafo2").innerHTML="Hola yo te puedo modificar con javascript descrito en el head";
+
+    } 
+</script>
+<body>
+<!-- 
+    Esto es un comentario en html 
+-->
+    <div>
+    <p id="parrafo">Hola soy un parrafo desde html</p>       
+    <button type="button" onclick='document.getElementById("parrafo").innerHTML="Hola yo te puedo modificar con javascript"'>Cambiar</button>        
+    </div>
+
+    <div>
+        <p id="parrafo2">Hola soy el parrafo 2 desde html</p>       
+        <button type="button" onclick="parrafof()"> Modificar p2</button>
+         </div>
+</body>
+</html>

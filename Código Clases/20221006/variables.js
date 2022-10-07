@@ -16,5 +16,5 @@ var objeto ={
 console.log("Hola mundo desde variables.js");
 
 function saludar(){
-console.log(`Hola ${nombre}`)
+console.log(`Hola ${nombre}`);
 }
