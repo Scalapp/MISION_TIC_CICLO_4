@@ -9,18 +9,23 @@
     <script>
         var saludo ="hola mundo con js desde el body";
         var parrafo="Hola soy un párrafo construido desde js";
-        window.alert(saludo);
+        //window.alert(saludo);
+        const a="hola mundo";  //cosntante a fuera del ámbito de la función.
+        //const a="hola mundo"; //esto es un error porque const es constante.
         function contenido(){
+            const a="modificada"; // no es una re declaración es un a diferente, pertenece ámbito de la función
             const parrafo3="Hola soy un párrafo construido con queryselector js";
-
+           
             document.write(parrafo);
+            console.log("el valor de a es: ",a )
         }
-
-       
+      
+        console.log(typeof(a));
+        console.log("el valor de a es: ",a )
     </script>
     <p>Hola soy un párrafo en html</p>
     <p>Hola soy un párrafo en html y voy a ser modificado desde js <script>contenido()</script></script></p>
-    <p id="header"></p>
+    <p id="header">Esto es un contenido y no se ve</p>
     <p id="header2"></p>
     <script>
         const parrafo3="Hola soy un párrafo construido con queryselector js";
