@@ -11,11 +11,12 @@
     </script>
     <script src="/sj/javascript.js"></script>
     <script src="indexjs.js"></script>
-    <script src="https://raw.githubusercontent.com/Scalapp/MISION_TIC_CICLO_4/main/C%C3%B3digo%20Clases/javascript/online.js"></script>
+    <script src='https://raw.githubusercontent.com/Scalapp/MISION_TIC_CICLO_4/main/C%C3%B3digo%20Clases/1.javascript/online.js'></script>
+    <script src="myScript.js"></script> 
 </head>
 <body>
     <H1 id="titulo">Hola mundo</H1>
-
+    <H1 id="titulo3">Hola mundo</H1>
 
     <button onclick="document.getElementById('test').src='image/html.JPG'">HTML</button>
     <button onclick="document.getElementById('test').src='image/css.JPG'">CSS</button>
@@ -27,7 +28,13 @@
     <script>
     document.getElementById('titulo').innerHTML="Esto es un título desde js";
     console.log("saludo desde consola");
+    document.getElementById("titulo3").innerHTML="Esto es un título3 desde js";
+    console.log("saludo desde consola3");
     </script>
+
+    <p id="online">Este es un párrafo que se cambia desde un archivo online</p>
+
+    <button type="button" onclick="myFunction()">Click para cargar online</button>
 
 </body>
 </html>
