@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="prueba"></p>
+    <script>
+       
+        {
+            var a ="hola mundo con a var dentro"
+            var a ="re declaración de a"
+            a ="asignación"
+        }
+        var a ="hola mundo con a var desde afuera"
+        {
+            let b ="hola mundo con b let dentro"
+            //let b ="let no permite re declaración de a"
+            b ="asignación"
+        }
+        {
+            //let b ="hola mundo con b var dentro"
+            let b ="let no permite re declaración de b pero si en otro ambito"
+            b ="asignación"
+        }
+        // const PI;// no está permitido
+        const PI= 3.1416;
+        //PI=4;  //no está permitido
+
+
+document.getElementById("prueba").innerHTML=PI;
+    </script>
+
+</body>
+</html>
