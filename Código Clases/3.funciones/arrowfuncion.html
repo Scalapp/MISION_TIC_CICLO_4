@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4> Funciones en javascript</h4>
+    <h4>La función flecha (arrow funcion):</h4>
+<p id="tradicional"></p>
+<p id="flecha"></p>
+<script>
+let saludo="";
+
+function saludar(){
+    return "Esto es un saludo desde una función tradicional";
+}
+flecha =()=>"Esto es un saludo desde una función flecha";
+document.getElementById("tradicional").innerHTML =saludar();
+document.getElementById("flecha").innerHTML =flecha();
+
+</script>
+
+
+</body>
+</html>

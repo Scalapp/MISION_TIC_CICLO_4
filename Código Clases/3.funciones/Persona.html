@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/persona.js"></script>
+</head>
+<body>
+    <h1>El nombre de la persona es:</h1>
+    <p id="persona"></p>
+
+    <script>
+       // alert(persona.primernombre);
+       //alert(persona.primerapellido);
+      //  alert(persona.nombrecompleto());
+        console.log(persona.primernombre);
+        console.log(persona.primerapellido);
+        console.log(persona.nombrecompleto());
+        document.getElementById("persona").innerHTML =persona.nombrecompleto();
+    </script>
+</body>
+</html>
