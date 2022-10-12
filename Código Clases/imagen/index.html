@@ -24,17 +24,24 @@
     
     
     <img id="test" src="">
-    <H1 id="titulo2">titulo final</H1>
+    <H1 id="titulo2">Esto es un título al final del documento</H1>
     <script>
-    document.getElementById('titulo').innerHTML="Esto es un título desde js";
-    console.log("saludo desde consola");
-    document.getElementById("titulo3").innerHTML="Esto es un título3 desde js";
-    console.log("saludo desde consola3");
+    document.getElementById('titulo').innerHTML="Esto es un título modificado con js desde el body";
+    console.log("saludo 2 desde script en el body por consola");
+    document.getElementById("titulo3").innerHTML="Esto es otro título (título3) modificado con js desde el body";
+    console.log("saludo 3 desde script en el body por consola");
     </script>
 
-    <p id="online">Este es un párrafo que se cambia desde un archivo online</p>
+    <p id="online">Este es un párrafo que se debería cambiar desde un archivo online</p>
 
     <button type="button" onclick="myFunction()">Click para cargar online</button>
 
+
+
+    <p id="demo">A Paragraph.</p>
+
+<button type="button" onclick="myFunction()">Click Me</button>
+
+<script src="https://www.w3schools.com/js/myScript.js"></script>
 </body>
 </html>
