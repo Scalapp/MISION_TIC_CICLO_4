@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/sj/notas.js"></script>
+</head>
+<body>
+    <h1 id="tareas"></h1>
+    <h4 id="contenido"></h4> 
+    <h4 id="contenido2"></h4> 
+    <script>
+       const tarea ={
+        nombre: "Pedro Perez",
+        fecha: "2022/10/12",
+        nota:5.0,
+        descrip: "Realizar una app para control de inventario",
+        cambiarnota: function(nuevanota){
+            return "la nueva nota es: "+(nuevanota+this.nota)/2;
+        }
+
+       };
+       console.log(tarea.nota);
+       console.log(tarea.fecha);
+       console.log(tarea.descrip);
+       console.log(tarea.nombre);
+       console.log(tarea.cambiarnota(4));
+       document.getElementById("tareas").innerHTML=tarea.descrip;
+
+      
+
+       document.getElementById("contenido").innerHTML=contenido();
+       document.getElementById("contenido2").innerHTML=reporte();
+
+    </script>    
+
+
+    
+
+</body>
+</html>

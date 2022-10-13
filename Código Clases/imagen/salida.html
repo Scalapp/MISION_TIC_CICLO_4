@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.alert("Hola soy una alerta en el head");
+        console.log("La suma en el head", 5+6);
+    </script>
+</head>
+<body>
+    <script>
+        window.alert("Hola soy una alerta al inicio del body");
+        console.log("La resta  al inicio del body", 5-6);
+    </script>
+    <script>
+        document.write("Hola este es un texto que se crea cuando carga la página con <b>(document.write)</b>");
+    </script>
+
+
+    <p id="salida1"> Texto original del párrafo</p>
+    <button onclick="document.getElementById('salida1').innerHTML='Este es el texto final cambiado con inner image/html.JPG'">innerHTML</button>
+    
+    <p id="salida2"> Texto original del párrafo</p>
+    <button onclick="document.write('Este es el texto final cambiado con document.write')">Salida 2: document.write</button>
+    <script>
+    window.alert("Hola soy una alerta al final del documento");
+    console.log("La multiplicación  al final del body", 5*6);
+    const a ="<h1>Hola mundo esta es la nueva página</h1><button>Botón</button>";
+    </script>
+
+    <p id="salida3"> Texto original del párrafo 3</p>   
+    <button onclick='document.write(a)'>Salida 3: document.write</button>
+ 
+</body>
+</html>
