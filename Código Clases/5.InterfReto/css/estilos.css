@@ -1,0 +1,18 @@
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #024554;
+    margin: 0 50px;
+    margin-bottom: 0px;
+
+}
+
+.area{
+    background-color: #C2C0A6;
+    
+}
+
+#control{
+    background-color: #A8B545;
+    margin: 0 50px;
+    padding: 0 50px;
+}

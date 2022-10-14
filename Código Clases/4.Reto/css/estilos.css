@@ -1,0 +1,16 @@
+ul {
+    background: #2980B9;
+    padding: 20px;
+}
+
+ul li {
+    background: #CACFD2;
+    color: #273746;
+    padding: 5px;
+    margin-left: 35px;
+    cursor: pointer;
+}
+
+#alerta {
+    color: red;
+}

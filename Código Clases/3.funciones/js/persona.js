@@ -3,6 +3,6 @@ const persona = {
     primerapellido: "Oliveros",
     edad:50,
     nombrecompleto: function (){
-        return this.primernombre + " " + this.primerapellido;
+        return this.primernombre + " Iván " + this.primerapellido;
     }
 };

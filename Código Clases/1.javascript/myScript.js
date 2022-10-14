@@ -4,3 +4,4 @@ function myFunction() {
 window.alert(saludo);
 	console.log("saludo desde online.js consola");
 }
+
