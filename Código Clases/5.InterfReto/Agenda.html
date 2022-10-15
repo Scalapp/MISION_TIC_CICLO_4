@@ -5,25 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/estilos.css">  
+    <script src=""></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">  
     <title>Document</title>
 </head>
 <body>
     <div class="area">
-         <div id="control">
+        <h1>Mis tareas</h1>
+        
+        <div id="control">
         <form id="formulario">
-            <h1>Mis tareas</h1>
+            <br>
             <textarea name="" id="entrada">Escriba acá su tarea</textarea>
             <br>
             <h4 id="mensaje"></h4>
             <button type="submit">Guardar tarea</button>
+            <br>
         </form>
            </div>
         <h2>Listado de tareas pendientes:</h2> 
         <div id="control"> 
         <ul id="controllista">
-            <li>Tarea 1</li>
-            <li>Tarea 2</li>
-            <li>Tarea 3</li>
+            <li>Tarea 1
+                <i onclick="eliminartarea(this)" class="fa-solid fa-eraser"></i>
+                <i onclick="eliminartarea(this)" class="fa-solid fa-pen-to-square"></i>
+            </li>
+            <li>Tarea 2
+                <i onclick="eliminartarea(this)" onclick="validacion()" class="fa-solid fa-eraser"></i>
+                <i onclick="eliminartarea(this)" class="fa-solid fa-pen-to-square"></i>
+            </li>
+            <li>Tarea 3
+                <i onclick="eliminartarea(this)" onclick="validacion()" class="fa-solid fa-eraser"></i>
+                <i onclick="eliminartarea(this)" class="fa-solid fa-pen-to-square"></i>
+            </li>
         </ul>
         </div>
     </div>

@@ -16,7 +16,7 @@ let validacion =() =>{
        msn.innerHTML="entrada incorrecta";
     }else {
         msn.innerHTML="";
-        window.alert("entrada correcta");
+        console.log("entrada correcta");
         creartarea();
 
     }
@@ -24,7 +24,15 @@ let validacion =() =>{
 
 let creartarea =()=>{
     //lista.innerHTML +=`<li>esto es un elemento nuevo para la lista</li>`;
-    lista.innerHTML +=`<li>${entrada.value}</li>`;
+    lista.innerHTML +=`<li>${entrada.value}<i onclick="validacion()" class="fa-solid fa-eraser"></i>
+    <i onclick="eliminartarea(this)" class="fa-solid fa-pen-to-square"></i></li>`;
+    
     entrada.value="";
 
 };
+
+let eliminartarea =(tarea)=>{
+//let tareaseleccionada
+tarea.parentElement.remove();
+
+}

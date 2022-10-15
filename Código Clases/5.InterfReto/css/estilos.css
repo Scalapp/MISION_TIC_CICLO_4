@@ -6,6 +6,9 @@ body {
 
 }
 
+button{
+    margin: 10px;
+}
 .area{
     background-color: #C2C0A6;
     
@@ -15,4 +18,18 @@ body {
     background-color: #A8B545;
     margin: 0 50px;
     padding: 0 50px;
+}
+
+li {
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+}
+
+i{
+    cursor: pointer;
+}
+
+i:hover {
+    color: red;
 }
