@@ -1,0 +1,62 @@
+[
+    {
+      "id": 1,
+      "nombre": "Pera",
+      "descripcion": "El rincon de Soto",
+      "precio": 12.34
+    },
+    {
+      "id": 2,
+      "nombre": "Kiwi",
+      "descripcion": "Zespri",
+      "precio": 2.34
+    },
+    {
+      "id": 3,
+      "nombre": "manzana",
+      "descripcion": null,
+      "precio": null
+    },
+    {
+      "id": 4,
+      "nombre": null,
+      "descripcion": null,
+      "precio": null
+    },
+    {
+      "id": 5,
+      "nombre": "Melocotones",
+      "descripcion": "Natur",
+      "precio": "3.55"
+    },
+    {
+      "id": 6,
+      "nombre": "Pera",
+      "descripcion": "El rincon de Soto",
+      "precio": 12.34
+    },
+    {
+      "id": 7,
+      "nombre": "Kiwi",
+      "descripcion": "Zespri",
+      "precio": 2.34
+    },
+    {
+      "id": 8,
+      "nombre": null,
+      "descripcion": null,
+      "precio": null
+    },
+    {
+      "id": 9,
+      "nombre": null,
+      "descripcion": null,
+      "precio": null
+    },
+    {
+      "id": 10,
+      "nombre": "Melocotones",
+      "descripcion": "Natur",
+      "precio": "3.55"
+    }
+  ]
