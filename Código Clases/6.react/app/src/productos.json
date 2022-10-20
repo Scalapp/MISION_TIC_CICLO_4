@@ -19,7 +19,7 @@
     },
     {
       "id": 4,
-      "nombre": null,
+      "nombre": "Mango",
       "descripcion": null,
       "precio": null
     },
@@ -43,13 +43,13 @@
     },
     {
       "id": 8,
-      "nombre": null,
+      "nombre": "Banana",
       "descripcion": null,
       "precio": null
     },
     {
       "id": 9,
-      "nombre": null,
+      "nombre": "uva",
       "descripcion": null,
       "precio": null
     },

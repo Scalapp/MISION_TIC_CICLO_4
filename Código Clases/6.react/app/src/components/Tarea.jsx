@@ -1,5 +1,5 @@
 import { Listado } from "./Listado";
-
+import { Formulario } from "./Formulario";
 //import React from "react";
 export function Tarea() {
   return (
@@ -8,10 +8,10 @@ export function Tarea() {
         <h1>App de tareas</h1>
       </header>
       <main>
-        <input></input>
-        <button></button>
-        <h4>App de tareas</h4>
-       <Listado/>
+        <h4>Formulario</h4>
+        <Formulario />
+        <h4>Estas son las tareas pendientes:</h4>
+        <Listado />
       </main>
     </div>
   );
