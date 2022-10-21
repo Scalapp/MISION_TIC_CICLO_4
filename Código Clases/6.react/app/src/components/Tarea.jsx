@@ -1,9 +1,10 @@
 import { Listado } from "./Listado";
 import { Formulario } from "./Formulario";
+import css from '../styles/Tarea.module.css';
 //import React from "react";
 export function Tarea() {
   return (
-    <div>
+    <div className={css.divtarea}>
       <header>
         <h1>App de tareas</h1>
       </header>
