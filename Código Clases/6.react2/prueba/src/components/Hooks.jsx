@@ -2,18 +2,18 @@ import css from "./Hooks.module.css";
 import { useState } from "react";
 
 export function Hooks() {
-  const [NuevaTarea, cambiarNuevaTarea] = useState();
-  const setdetareas = localStorage.getItem();
+  const [NuevaTarea, cambiarNuevaTarea] = useState([]);
+  //const setdetareas = localStorage.getItem();
   const captura = (e) => {
     e.preventDefault();
-    guardarTarea(NuevaTarea);
-    localStorage.setItem("tarea3", NuevaTarea);
+    //guardarTarea(NuevaTarea);
+   // localStorage.setItem("tarea3", NuevaTarea);
     cambiarNuevaTarea("");
   };
 
-  function guardarTarea(NuevaTarea) {
+ /* function guardarTarea(NuevaTarea) {
     cambiarNuevaTarea([...setdetareas, NuevaTarea]);
-  }
+  }*/
 
   return (
     <div className={css.componeteVariable}>

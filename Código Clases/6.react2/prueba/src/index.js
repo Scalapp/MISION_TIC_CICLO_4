@@ -81,13 +81,7 @@ function ActividadT4({persona,tiempo,children}) {
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
-  
-    
     <Hooks/>
-  
-  </>
-);
-/* {componeteVariable} 
     <Actividad />
     <ActividadT2 persona="Juan David" tiempo ="30 min"/>  
     <ActividadT3 persona="Carlos Mario" tiempo ="20 min"/>  
@@ -99,6 +93,10 @@ root.render(
     <div>Componentes fuera del index:</div>
     <Tarea />
     <App />
-    <Listado /> */
+    <Listado />
+  </>
+);
+/* {componeteVariable} 
+   */
 //<div>Hola mundo</div>
 //<><Tarea /><App /></>
