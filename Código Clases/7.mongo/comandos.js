@@ -1,3 +1,43 @@
+//You may want to copy or rename ~/.mongorc.js to ~/.mongoshrc.js.
+test> 4+4
+8
+test> 1-5
+-4
+test> 4545*+878
+217605510
+test> console.log("Hola la suma de 2+3 = ",2+3)
+//Hola la suma de 2+3 =  5
+
+test> print("Hola mundo")
+//Hola mundo
+
+test> new Date()
+ISODate("2022-10-26T23:30:29.818Z")
+test> Date()
+//Wed Oct 26 2022 18:30:33 GMT-0500 (hora estándar de Colombia)
+test> Date("2022/10/26")
+//Wed Oct 26 2022 18:30:56 GMT-0500 (hora estándar de Colombia)
+test> function suma(a,b){return a+b}
+//[Function: suma]
+test> suma(85,6)
+91
+test> function factorial(n){if(n<=1) return 1; return n*factorial(n-1)}
+//[Function: factorial]
+test> factorial(6)
+720
+test> factorial(1)
+1
+test> factorial(0)
+1
+test>
+
+//show collections
+//dc.createCollection("Cliente")
+db.usuarios.insertOne({ "nombre": "Carlos" },{apelido:"Olarte"})
+
+
+
+
 function factorial(n) {
   if (n <= 1) return 1;
   return n * factorial(n - 1);
@@ -31,11 +71,11 @@ db.productos.insertOne({
 
     db.productos.insert([
         {
-          "id": 1,
-          "nombre": "Pera",
-          "descripcion": "PERA, PYRUS CUMMUNIS / ROSACEAE",
-          "poster_path": "/1.jpg",
-          "precio": 12.34
+          id: 1,
+          nombre: "Pera",
+          descripcion: "PERA, PYRUS CUMMUNIS / ROSACEAE",
+          poster_path: "/1.jpg",
+          precio: 12.34
         },
         {
           "id": 2,
@@ -102,3 +142,6 @@ db.productos.insertOne({
         }
       ])
       
+
+
+
