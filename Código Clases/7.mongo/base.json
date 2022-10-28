@@ -1,0 +1,20 @@
+{
+    "Universidad 1":[
+        {
+            "Nombre":"Juan", "nota": 5.0
+        },
+        {
+            "Nombre":"pedro"
+        }
+
+    ],
+    "Universidad 2":[
+        {
+            "Nombre":"Juan", "nota": 5.0
+        },
+        {
+            "Nombre":"pedro"
+        }
+
+    ]
+}

@@ -30,7 +30,7 @@ test> factorial(1)
 test> factorial(0)
 1
 test>
-
+//use todo;
 //show collections
 //dc.createCollection("Cliente")
 db.usuarios.insertOne({ "nombre": "Carlos" },{apelido:"Olarte"})
@@ -142,6 +142,7 @@ db.productos.insertOne({
         }
       ])
       
-
-
-
+      db.productos.find({ precio: { $gt: 200 }}).sort({ nombre: 1})
+      db.productos.find({ precio: { $gt: 200 }}).sort({ nombre: 1}).forEach(producto =>print("hola mundo")) 
+      db.productos.find({ precio: { $gt: 200 }}).sort({ nombre: 1}).forEach(producto =>print("hola mundo")) 
+      db.poductos.update({un_string: 'Manzana'},{$rename:{nombre:"name"}})
