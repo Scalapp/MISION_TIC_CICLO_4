@@ -1,0 +1,4 @@
+use('mongodbVSCodePlaygroundDB');
+db.sales.find({});
+db.sales.findOne();
+
