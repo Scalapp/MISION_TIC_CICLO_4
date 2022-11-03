@@ -13,7 +13,7 @@ const corsOptions ={
 app.use(cors(corsOptions));
 app.use(router);
 
-app.use('/', (rep, res)=>{
+app.use('/b', (rep, res)=>{
     res.send("Esto es mi primer micro servicio, realicé una  y otra modificación: Micro servicio v 1.0.0");
 });
 
