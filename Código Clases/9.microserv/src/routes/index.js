@@ -6,5 +6,5 @@ const router = require("express").Router();
 
 const helloRoute =require("./hello");
 
-router.use('/hello', helloRoute);
+router.use('/hola', helloRoute);
 module.exports= router;

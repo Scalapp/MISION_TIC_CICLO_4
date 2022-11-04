@@ -10,7 +10,7 @@ const router = require("./src/routes");
 
 const app = express();
 
-const port =process.env.PORT || 3000;
+const port =process.env.PORT || 8080;
 
 app.use(json());   // decirle a la app que va a retornar un json 
 app.use(urlencoded({extended:false})); //tener acceso a lo que venga en la url 
