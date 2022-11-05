@@ -3,7 +3,9 @@ const calcular =require('./calculadora');
 const holaIndex =require('./hola');
 
 
+
 router.use('/calculadora',calcular);
 router.use('/inicio',holaIndex);
+
 
 module.exports = router;

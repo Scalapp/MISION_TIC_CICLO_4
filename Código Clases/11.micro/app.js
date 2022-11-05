@@ -2,6 +2,8 @@ const express =require('express');
 const cors = require('cors');
 const router =require("./src/routes")
 const {json, urlencoded} = express;
+const path=require('path');
+
 
 //creación y configuración 
 const app =express();
@@ -32,4 +34,12 @@ app.use('/d', (req, resp)=>{
 
 app.listen(port,()=>{
     console.log("El servidor está escuchando atentamente en el puerto",port)
+});
+
+
+
+app.use("/home", (request, response)=>{
+    
+    response.sendFile(path.join(`${__dirname}/src/html/index.html`));
+
 });

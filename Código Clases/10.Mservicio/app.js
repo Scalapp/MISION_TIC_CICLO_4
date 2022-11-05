@@ -2,10 +2,15 @@
 const express =require('express');
 const cors = require('cors');
 const router = require("./src/routes")
+const {json, urlencoded}=express;
 
 //Configuración de M servicio
 const app =express();
-const port = 8080 || process.env.PORT;
+const port = 3000 || process.env.PORT;
+
+app.use(json());
+app.use(urlencoded({extended:false}));
+
 const corsOptions ={
     origin: '*',
     OptionsSuccessStatus:200
