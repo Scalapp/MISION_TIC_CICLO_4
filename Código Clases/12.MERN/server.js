@@ -15,7 +15,7 @@ const db = require("./config/keys").mongoURI;
 
 //conección a la base de datos
 mongoose.connect(db, {useNewUrlParser:true})
-.then(()=>{console.log("Concección exitosa a la base de datos")})
+.then(()=>{console.log("Conexión exitosa a la base de datos")})
 .catch((err)=>console.log(err));
 
 //sofware intrermedio passport
