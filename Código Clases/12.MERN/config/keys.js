@@ -1,0 +1,1 @@
+module.exports ={mongoURI:"mongodb+srv://mongo:MDkZMTJw79DdiirK@cluster0.hbvwr8z.mongodb.net/test"};
