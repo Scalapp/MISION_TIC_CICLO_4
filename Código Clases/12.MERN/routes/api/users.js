@@ -7,10 +7,11 @@ const validateLoginInput = require("../../validation/login");
 const validateRegisterInput = require("../../validation/register");
 const User = require("../../models/user");
 
-router.post("/registo", (req, rep) => {
+router.post("/registro", (req, res) => {
+    console.log("registro");
   //Validación del registro
   //Desestructurar el objeto que recibimos de la validación
-  const { error, isValid } = validateRegisterInput(req.body);
+  const { errors, isValid } = validateRegisterInput(req.body);
   if (!isValid) {
     return res.status(400).json(errors);
   }
@@ -39,13 +40,14 @@ router.post("/registo", (req, rep) => {
 });
 
 router.post("/login", (req, res) => {
+    console.log("login");
   // Validación del formulario
   // Desestructurar el objeto de la petición
   const { errors, isValid } = validateLoginInput(req.body);
 
   //Verificar el formulario
   if (!isValid) {
-    return res.status().json(erros);
+    return res.status().json(errors);
   }
   const email = req.body.email;
   const password = req.body.password;
