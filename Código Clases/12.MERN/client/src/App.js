@@ -7,6 +7,7 @@ function App() {
   return (
     <div className="App">
       <h1>Hola mundo desde app</h1>
+      
       <Navbar/>
       <Landing/>
     </div>

@@ -2,7 +2,7 @@
   "short_name": "React App",
   "main": "index.js",
   "name": "Create React App Sample",
-  "start_url": "./App.js",
+  "start_url": "./src/App.js",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
