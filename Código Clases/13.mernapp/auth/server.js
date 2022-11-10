@@ -20,7 +20,7 @@ mongoose.connect(db,{useNewUrlParser:true})
 
 //passport config
 app.use(passport.initialize());
-require("./routes/passport")(passport);
+require("./passport")(passport);
 //config
 const port =process.env.PORT || 5000;
 app.listen(port, ()=> console.log(`El servidor está activo en el puerto:${port}`));
