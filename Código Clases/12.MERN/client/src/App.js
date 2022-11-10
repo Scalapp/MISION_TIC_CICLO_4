@@ -1,6 +1,7 @@
 import "./App.css";
 import Landing from "./components/layout/Landing";
 import Navbar from "./components/layout/Navbar";
+import React from 'react';
 
 function App() {
   return (
