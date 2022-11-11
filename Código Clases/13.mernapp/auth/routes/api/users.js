@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 const keys = require("../../config/keys");
 const validateLoginInput = require("../../validation/login");
 const validateRegisterInput = require("../../validation/register");
-const User = require("../../models/user");
+const User = require("../../models/User");
 
 router.post("/registro", (req, res) => {
     console.log("registro");
@@ -71,7 +71,7 @@ router.post("/login", (req, res) => {
           //token
           jwt.sign(
             payload,
-            keys.secretOkey,
+            keys.secretOrKey,
             { expiresIn: 31556926 },
             (err, token) => {
               res.json({

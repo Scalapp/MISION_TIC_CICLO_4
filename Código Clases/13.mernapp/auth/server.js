@@ -2,8 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport");
-const user = require("./routes/api/users");
-
+const users = require("./routes/api/users");
 const app = express();
 
 //body-parser software intermedio middleware
@@ -21,7 +20,8 @@ mongoose.connect(db,{useNewUrlParser:true})
 //passport config
 app.use(passport.initialize());
 require("./passport")(passport);
-//config
+//Rutas 
+app.use("./routes/api/users", users);
 const port =process.env.PORT || 5000;
 app.listen(port, ()=> console.log(`El servidor está activo en el puerto:${port}`));
 
