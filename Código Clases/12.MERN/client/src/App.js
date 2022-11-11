@@ -6,7 +6,7 @@ import React from 'react';
 function App() {
   return (
     <div className="App">
-      <h1>Hola mundo desde app</h1>
+      <h6>Hola mundo desde app</h6>
       
       <Navbar/>
       <Landing/>
