@@ -22,6 +22,8 @@ class Login extends Component {
         };
         console.log(userData);
         };
+//Método para la parte gráfica o front con su respectivo formulario:
+
     render() {
         const { errors } = this.state;  
 return (
@@ -33,7 +35,7 @@ return (
         </Link>
         <div className="col s12" style={{ paddingLeft: "11.250px"}}>
             <h4> <b>Login</b> below </h4>
-            <p className="grey-text text-darken-1"> ¿No tiene cuenta?<Link to="/register">Register</Link></p>
+            <p className="grey-text text-darken-1"> ¿No tiene cuenta?<Link to="/register">Registrarse</Link></p>
         </div>
             <form noValidate onSubmit={this.onSubmit}>
                 <div className="input-field col s12">

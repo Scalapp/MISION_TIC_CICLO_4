@@ -12,6 +12,7 @@ class Register extends Component {
       errors: {},
     };
   }
+  //Métodos 
   onChange = (e) => {
     this.setState({ [e.target.id]: e.target.value });
   };
@@ -25,6 +26,7 @@ class Register extends Component {
     };
     console.log(newUser);
   };
+  //renderizado, parte gráfica o front
   render() {
     const { errors } = this.state;
     return (
@@ -32,12 +34,11 @@ class Register extends Component {
         <div className="row">
           <div className="col s8 offset-s2">
             <Link to="/" className="btn-flat waves-effect">
-              <i className="material-icons left">keyboard_backspace</i> Back to
-              home
+              <i className="material-icons left">keyboard_backspace</i> Regresar a página inicial
             </Link>
             <div className="col s12" style={{ paddingLeft: "11.250px" }}>
               <h4>
-                <b>Register</b> below
+                <b>Registro:</b> below
               </h4>
               <p className="grey-text text-darken-1">
                 a tiene una cuenta? <Link to="/login">Ir a inicio</Link>
