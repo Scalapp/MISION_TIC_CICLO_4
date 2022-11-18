@@ -1,0 +1,367 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. Todos los derechos reservados.
+
+Prueba la nueva tecnología PowerShell multiplataforma https://aka.ms/pscore6
+
+PS C:\Users\ITOS> docker run --name repo alpine/git clone https://github.com/docker/getting-started.git   
+PS C:\Users\ITOS> docker cp repo:/git/getting-started/ .
+Error: No such container:path: repo:/git/getting-started/
+PS C:\Users\ITOS>
+
+PS C:\Users\ITOS> docker run --name repo alpine/git clone https://github.com/docker/getting-started.git
+Unable to find image 'alpine/git:latest' locally
+latest: Pulling from alpine/git
+213ec9aee27d: Pull complete
+50c9f48d05e0: Pull complete
+906241af8309: Pull complete
+Digest: sha256:1dc958bc2b4770e2686acc73e23b8050b0d1b9e22c128b6fa39f5283874ad6cf
+Status: Downloaded newer image for alpine/git:latest
+Cloning into 'getting-started'...
+PS C:\Users\ITOS> docker cp repo:/git/getting-started/ .
+PS C:\Users\ITOS> cd getting-started
+PS C:\Users\ITOS\getting-started> docker build -t docker101tutorial .
+[+] Building 7.0s (8/8) FINISHED
+ => [internal] load build definition from Dockerfile                                                 3.0s 
+ => => transferring dockerfile: 1.12kB                                                               0.2s 
+ => [internal] load .dockerignore                                                                    2.6s 
+ => => transferring context: 52B                                                                     0.1s 
+ => CANCELED [internal] load metadata for docker.io/library/nginx:alpine                             4.0s 
+ => CANCELED [internal] load metadata for docker.io/library/python:alpine                            3.5s 
+ => CANCELED [internal] load metadata for docker.io/library/node:12-alpine                           3.8s 
+ => [auth] library/node:pull token for registry-1.docker.io                                          0.0s 
+ => [auth] library/nginx:pull token for registry-1.docker.io                                         0.0s 
+ => [auth] library/python:pull token for registry-1.docker.io                                        0.0s 
+failed to solve with frontend dockerfile.v0: failed to create LLB definition: failed to copy: httpReadSeek
+er: failed open: failed to do request: context canceled
+PS C:\Users\ITOS\getting-started> ^C
+PS C:\Users\ITOS\getting-started> cd getting-started
+cd : No se encuentra la ruta de acceso 'C:\Users\ITOS\getting-started\getting-started' porque no existe.
+En línea: 1 Carácter: 1
++ cd getting-started
++ ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\ITOS\g...getting-started:String) [Set-Location], 
+    ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+ 
+PS C:\Users\ITOS\getting-started> docker build -t docker101tutorial .
+[+] Building 128.4s (25/25) FINISHED
+ => [internal] load build definition from Dockerfile                                                 0.6s 
+ => => transferring dockerfile: 32B                                                                  0.0s 
+ => [internal] load .dockerignore                                                                    1.0s 
+ => => transferring context: 34B                                                                     0.0s 
+ => [internal] load metadata for docker.io/library/nginx:alpine                                      3.6s 
+ => [internal] load metadata for docker.io/library/python:alpine                                     3.9s 
+ => [internal] load metadata for docker.io/library/node:12-alpine                                    4.0s 
+ => [app-base 1/5] FROM docker.io/library/node:12-alpine@sha256:d4b15b3d48f42059a15bd659be60afe217  54.9s 
+ => => resolve docker.io/library/node:12-alpine@sha256:d4b15b3d48f42059a15bd659be60afe21762aae9d6cb  1.4s 
+ => => sha256:d4b15b3d48f42059a15bd659be60afe21762aae9d6cbea6f124440895c27db68 1.43kB / 1.43kB       0.0s 
+ => => sha256:4517380049fc3c9aacceae7764fcf3500354b0ac8a47e4afb35b5bbeb75b9498 1.16kB / 1.16kB       0.0s 
+ => => sha256:bb6d28039b8cec9aa8d9032f9aa640a792a60c2cb1644691627bf046aab27c8b 6.58kB / 6.58kB       0.0s 
+ => => sha256:3bf6d738020517f4622814e8c21db4b4aaa78ae7cab4e4f872c11696886c6285 24.91MB / 24.91MB    36.2s 
+ => => sha256:7939e601ee5e4737cf7fdb6d1dfe31ca4c2697109290462f694710761450aef0 2.36MB / 2.36MB      20.8s 
+ => => sha256:31f0fb9de071269230cb0f786012ae4e81d26e489b1fe922e57b5201e6bc9ab0 451B / 451B          22.2s 
+ => => extracting sha256:3bf6d738020517f4622814e8c21db4b4aaa78ae7cab4e4f872c11696886c6285            2.5s 
+ => => extracting sha256:7939e601ee5e4737cf7fdb6d1dfe31ca4c2697109290462f694710761450aef0            0.2s 
+ => => extracting sha256:31f0fb9de071269230cb0f786012ae4e81d26e489b1fe922e57b5201e6bc9ab0            0.0s 
+ => [internal] load build context                                                                    3.2s 
+ => => transferring context: 18.50MB                                                                 1.4s 
+ => [stage-6 1/3] FROM docker.io/library/nginx:alpine@sha256:455c39afebd4d98ef26dd70284aa86e6810b0  22.3s 
+ => => resolve docker.io/library/nginx:alpine@sha256:455c39afebd4d98ef26dd70284aa86e6810b0485af5f4f  1.5s 
+ => => sha256:455c39afebd4d98ef26dd70284aa86e6810b0485af5f4f222b19b89758cabf1e 1.65kB / 1.65kB       0.0s 
+ => => sha256:0f2ab24c6aba5d96fcf6e7a736333f26dca1acf5fa8def4c276f6efc7d56251f 1.57kB / 1.57kB       0.0s 
+ => => sha256:19dd4d73108a1feefc29d299f3727467ac02486c83474fc3979e4a7637291fe6 8.89kB / 8.89kB       0.0s 
+ => => sha256:ca7dd9ec2225f2385955c43b2379305acd51543c28cf1d4e94522b3d94cce3ce 2.81MB / 2.81MB       2.8s 
+ => => sha256:76a48b0f58980a64d28bc3575ae4733eb337f7b82403559122b13d5e2ced3921 7.41MB / 7.41MB       9.0s 
+ => => sha256:1a7b9b9bbef6853211515e42f58be7763749950c244a0c485bb4afd1946e06d7 958B / 958B           2.9s 
+ => => extracting sha256:ca7dd9ec2225f2385955c43b2379305acd51543c28cf1d4e94522b3d94cce3ce            0.3s 
+ => => sha256:4342b1ab302e894161372b32fe2976899a978bf8ff2241fb1655dc25e6645a34 1.41kB / 1.41kB       3.7s 
+ => => sha256:b704883c57afcf77f6bc48709943bcf808c9e9945d7e04926be41226fa415d33 773B / 773B           4.2s 
+ => => extracting sha256:76a48b0f58980a64d28bc3575ae4733eb337f7b82403559122b13d5e2ced3921            0.8s 
+ => => extracting sha256:2f12a0e7c01d607251a4040fa41518fd2542f3ebab83a6f7817867d0de111c96            0.0s 
+ => => extracting sha256:1a7b9b9bbef6853211515e42f58be7763749950c244a0c485bb4afd1946e06d7            0.0s 
+ => => extracting sha256:b704883c57afcf77f6bc48709943bcf808c9e9945d7e04926be41226fa415d33            0.0s 
+ => => extracting sha256:4342b1ab302e894161372b32fe2976899a978bf8ff2241fb1655dc25e6645a34            0.0s 
+ => [base 1/4] FROM docker.io/library/python:alpine@sha256:08b03b140633664ed4a55630de38f847d190593  38.8s 
+ => => resolve docker.io/library/python:alpine@sha256:08b03b140633664ed4a55630de38f847d19059318c247  1.6s 
+ => => sha256:08b03b140633664ed4a55630de38f847d19059318c2473a5bff592d8a0b051d5 1.65kB / 1.65kB       0.0s 
+ => => sha256:a71e8ff8638a437e4cd8ad80a609235af54bc04d75e1aa2832146595e31d83bc 1.37kB / 1.37kB       0.0s 
+ => => sha256:91c0c14478fa977cd98b5ce1632a2050664d18fba38e92a279c23862e3611ada 7.03kB / 7.03kB       0.0s 
+ => => sha256:ca7dd9ec2225f2385955c43b2379305acd51543c28cf1d4e94522b3d94cce3ce 2.81MB / 2.81MB       2.6s 
+ => => extracting sha256:ca7dd9ec2225f2385955c43b2379305acd51543c28cf1d4e94522b3d94cce3ce          117.3s 
+ => => sha256:9e124a36b9ab9caae9b9b43bffcb6f6d9f126ab89cf2a8b20b9a6f912df03d36 661.83kB / 661.83kB   5.8s 
+ => => sha256:86456952aa287ca80ac7d7f349dc9edbabda9393ab022d20f2e4c2263cd7d2e7 13.00MB / 13.00MB    28.3s 
+ => => extracting sha256:9e124a36b9ab9caae9b9b43bffcb6f6d9f126ab89cf2a8b20b9a6f912df03d36            0.5s 
+ => => sha256:4ece9ef7a5797feb2ddaf23aee223848643c0baaedaaa203c721aecb6b272b25 231B / 231B           6.6s 
+ => => sha256:ef27b859822294ab1253f8e09a8712d63ea9939eadd1dc4b595d52726c0b020d 3.06MB / 3.06MB      14.6s 
+ => => extracting sha256:86456952aa287ca80ac7d7f349dc9edbabda9393ab022d20f2e4c2263cd7d2e7            1.2s 
+ => => extracting sha256:4ece9ef7a5797feb2ddaf23aee223848643c0baaedaaa203c721aecb6b272b25            0.0s 
+ => => extracting sha256:ef27b859822294ab1253f8e09a8712d63ea9939eadd1dc4b595d52726c0b020d            0.6s 
+ => [base 2/4] WORKDIR /app                                                                          5.0s 
+ => [base 3/4] COPY requirements.txt .                                                               3.3s 
+ => [base 4/4] RUN pip install -r requirements.txt                                                  61.4s 
+ => [app-base 2/5] WORKDIR /app                                                                      1.4s 
+ => [app-base 3/5] COPY app/package.json app/yarn.lock ./                                            1.9s 
+ => [app-base 4/5] COPY app/spec ./spec                                                              1.8s 
+ => [app-base 5/5] COPY app/src ./src                                                                1.8s 
+ => [app-zip-creator 1/4] COPY app/package.json app/yarn.lock ./                                     2.1s 
+ => [app-zip-creator 2/4] COPY app/spec ./spec                                                       1.8s 
+ => [app-zip-creator 3/4] COPY app/src ./src                                                         2.0s 
+ => [app-zip-creator 4/4] RUN apk add zip &&     zip -r /app.zip /app                                7.4s 
+ => [stage-6 2/3] COPY --from=app-zip-creator /app.zip /usr/share/nginx/html/assets/app.zip          1.9s 
+ => [build 2/2] RUN mkdocs build                                                                     5.0s 
+ => [stage-6 3/3] COPY --from=build /app/site /usr/share/nginx/html                                  2.2s 
+ => exporting to image                                                                               1.9s 
+ => => exporting layers                                                                              1.2s 
+ => => naming to docker.io/library/docker101tutorial                                                 0.1s 
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them      
+PS C:\Users\ITOS\getting-started> docker build -t docker101tutorial .
+[+] Building 5.5s (28/28) FINISHED
+ => [internal] load build definition from Dockerfile                                                 0.7s 
+ => => transferring dockerfile: 32B                                                                  0.0s 
+ => [internal] load .dockerignore                                                                    1.0s 
+ => [internal] load metadata for docker.io/library/nginx:alpine                                      2.6s 
+ => [internal] load metadata for docker.io/library/python:alpine                                     2.8s 
+ => [internal] load metadata for docker.io/library/node:12-alpine                                    2.7s 
+ => [auth] library/nginx:pull token for registry-1.docker.io                                         0.0s 
+ => [auth] library/node:pull token for registry-1.docker.io                                          0.0s 
+ => [auth] library/python:pull token for registry-1.docker.io                                        0.0s 
+ => [base 1/4] FROM docker.io/library/python:alpine@sha256:08b03b140633664ed4a55630de38f847d1905931  0.0s 
+ => [internal] load build context                                                                    0.6s 
+ => => transferring context: 8.06kB                                                                  0.1s 
+ => [app-base 1/5] FROM docker.io/library/node:12-alpine@sha256:d4b15b3d48f42059a15bd659be60afe2176  0.0s 
+ => [stage-6 1/3] FROM docker.io/library/nginx:alpine@sha256:455c39afebd4d98ef26dd70284aa86e6810b04  0.0s 
+ => CACHED [app-base 2/5] WORKDIR /app                                                               0.0s 
+ => CACHED [app-base 3/5] COPY app/package.json app/yarn.lock ./                                     0.0s 
+ => CACHED [app-base 4/5] COPY app/spec ./spec                                                       0.0s 
+ => CACHED [app-base 5/5] COPY app/src ./src                                                         0.0s 
+ => CACHED [app-zip-creator 1/4] COPY app/package.json app/yarn.lock ./                              0.0s 
+ => CACHED [app-zip-creator 2/4] COPY app/spec ./spec                                                0.0s 
+ => CACHED [app-zip-creator 3/4] COPY app/src ./src                                                  0.0s 
+ => CACHED [app-zip-creator 4/4] RUN apk add zip &&     zip -r /app.zip /app                         0.0s 
+ => CACHED [stage-6 2/3] COPY --from=app-zip-creator /app.zip /usr/share/nginx/html/assets/app.zip   0.0s 
+ => CACHED [base 2/4] WORKDIR /app                                                                   0.0s 
+ => CACHED [base 3/4] COPY requirements.txt .                                                        0.0s 
+ => CACHED [base 4/4] RUN pip install -r requirements.txt                                            0.0s 
+ => CACHED [build 1/2] COPY . .                                                                      0.0s 
+ => CACHED [build 2/2] RUN mkdocs build                                                              0.0s 
+ => CACHED [stage-6 3/3] COPY --from=build /app/site /usr/share/nginx/html                           0.0s 
+ => exporting to image                                                                               0.6s 
+ => => exporting layers                                                                              0.0s 
+ => => writing image sha256:5b8fd795526451e4c85ef483939269f4743ddfe119e851c424734dbad6eb5d3b         0.1s 
+ => => naming to docker.io/library/docker101tutorial                                                 0.0s 
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them      
+PS C:\Users\ITOS\getting-started> docker run -d -p 80:80 --name docker-tutorial docker101tutorial
+e67201417a2c17f19e2f09a6bdc382d752e37c066fac4d07a5cc494c76e28ab5
+docker: Error response from daemon: driver failed programming external connectivity on endpoint docker-tut
+orial (d3a3fe610c19341b180831ddfd36d147f72f0765f925caa81b25a0212ee3007e): Bind for 0.0.0.0:80 failed: port
+ is already allocated.
+cd : No se encuentra la ruta de acceso 'C:\Users\ITOS\getting-started\getting-started' porque no existe.  
+En línea: 1 Carácter: 1
++ cd getting-started
++ ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\ITOS\g...getting-started:String) [Set-Location],  
+    ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+ 
+PS C:\Users\ITOS\getting-started> docker build -t docker101tutorial .
+[+] Building 20.9s (28/28) FINISHED
+ => [internal] load build definition from Dockerfile                                                 0.9s 
+ => => transferring dockerfile: 32B                                                                  0.0s 
+ => [internal] load .dockerignore                                                                    1.9s 
+ => => transferring context: 34B                                                                     0.0s 
+ => [internal] load metadata for docker.io/library/nginx:alpine                                      3.5s 
+ => [internal] load metadata for docker.io/library/python:alpine                                     3.9s 
+ => [internal] load metadata for docker.io/library/node:12-alpine                                    3.8s 
+ => [auth] library/nginx:pull token for registry-1.docker.io                                         0.0s 
+ => [auth] library/node:pull token for registry-1.docker.io                                          0.0s 
+ => [auth] library/python:pull token for registry-1.docker.io                                        0.0s 
+ => [stage-6 1/3] FROM docker.io/library/nginx:alpine@sha256:455c39afebd4d98ef26dd70284aa86e6810b04  0.0s 
+ => [app-base 1/5] FROM docker.io/library/node:12-alpine@sha256:d4b15b3d48f42059a15bd659be60afe2176  0.0s 
+ => [base 1/4] FROM docker.io/library/python:alpine@sha256:08b03b140633664ed4a55630de38f847d1905931  0.0s 
+ => [internal] load build context                                                                    0.7s 
+ => => transferring context: 8.75kB                                                                  0.0s 
+ => CACHED [base 2/4] WORKDIR /app                                                                   0.0s 
+ => CACHED [base 3/4] COPY requirements.txt .                                                        0.0s 
+ => CACHED [base 4/4] RUN pip install -r requirements.txt                                            0.0s 
+ => [build 2/2] RUN mkdocs build                                                                     5.8s 
+ => CACHED [app-base 2/5] WORKDIR /app                                                               0.0s 
+ => CACHED [app-base 3/5] COPY app/package.json app/yarn.lock ./                                     0.0s 
+ => CACHED [app-base 4/5] COPY app/spec ./spec                                                       0.0s 
+ => CACHED [app-zip-creator 1/4] COPY app/package.json app/yarn.lock ./                              0.0s 
+ => CACHED [app-zip-creator 2/4] COPY app/spec ./spec                                                0.0s 
+ => CACHED [app-zip-creator 3/4] COPY app/src ./src                                                  0.0s 
+ => CACHED [app-zip-creator 4/4] RUN apk add zip &&     zip -r /app.zip /app                         0.0s 
+ => [stage-6 3/3] COPY --from=build /app/site /usr/share/nginx/html                                  2.1s 
+ => exporting to image                                                                               2.8s 
+ => => exporting layers                                                                              1.6s 
+ => => writing image sha256:00a39dda56142379c50834145ad7282faaba7f757d5e6dc82c458c29c07c3435         0.2s 
+PS C:\Users\ITOS\getting-started> docker scan
+Docker Scan relies upon access to Snyk, a third party provider, do you consent to proceed using Snyk? (y/N
+y
+
+
+Options:
+      --accept-license    Accept using a third party scanning provider
+      --dependency-tree   Show dependency tree with scan results
+      --exclude-base      Exclude base image from vulnerability scanning
+                          (requires --file)
+  -f, --file string       Dockerfile associated with image, provides more
+                          detailed results
+                          them to a single one (requires --json)
+      --json              Output results in JSON format
+      --login             Authenticate to the scan provider using an
+                          optional token (with --token), or web base
+                          token if empty
+      --reject-license    Reject using a third party scanning provider
+      --severity string   Only report vulnerabilities of provided level
+                          or higher (low|medium|high)
+      --token string      Authentication token to login to the third
+                          party scanning provider
+      --version           Display version of the scan plugin
+"docker scan" requires exactly 1 argument
+PS C:\Users\ITOS\getting-started> +^C
+PS C:\Users\ITOS\getting-started> docker scan 00a39dda56142379c
+WARNING!  Partially defined environment, please ensure to provide both SNYK_INTEGRATION_NAME and SNYK_INTE
+GRATION_VERSION together!
+Failed to scan image "00a39dda56142379c". Please make sure the image and/or repository exist, and that you
+ are using the correct credentials.
+PS C:\Users\ITOS\getting-started> docker run -d -p 80:80 --name docker-tutorial docker101tutorial
+docker: Error response from daemon: Conflict. The container name "/docker-tutorial" is already in use by c
+ontainer "e67201417a2c17f19e2f09a6bdc382d752e37c066fac4d07a5cc494c76e28ab5". You have to remove (or rename
+) that container to be able to reuse that name.
+See 'docker run --help'.
+PS C:\Users\ITOS\getting-started> docker ps
+CONTAINER ID   IMAGE                    COMMAND                  CREATED          STATUS          PORTS   
+             NAMES
+b1a9e422acf5   docker/getting-started   "/docker-entrypoint.…"   16 minutes ago   Up 16 minutes   0.0.0.0:
+80->80/tcp   clever_dijkstra
+PS C:\Users\ITOS\getting-started>
+PS C:\Users\ITOS\getting-started>
+PS C:\Users\ITOS\getting-started> docker rm b1a9e422acf5
+Error response from daemon: You cannot remove a running container b1a9e422acf51aa12cf822a7d3c990f3e434e89c
+PS C:\Users\ITOS\getting-started> docker stop b1a9e422acf5
+b1a9e422acf5
+PS C:\Users\ITOS\getting-started> docker rm b1a9e422acf5  
+b1a9e422acf5
++ cd getting-started
++ ~~~~~~~~~~~~~~~~~~
+    ItemNotFoundException
+ 
+[+] Building 15.5s (25/25) FINISHED
+ => [internal] load build definition from Dockerfile                                                 5.3s 
+ => => transferring dockerfile: 32B                                                                  0.0s 
+ => [internal] load .dockerignore                                                                    6.8s 
+ => => transferring context: 34B                                                                     0.0s 
+ => [internal] load metadata for docker.io/library/nginx:alpine                                      4.7s 
+ => [internal] load metadata for docker.io/library/python:alpine                                     4.5s 
+ => [app-base 1/5] FROM docker.io/library/node:12-alpine@sha256:d4b15b3d48f42059a15bd659be60afe2176  0.0s 
+ => [internal] load build context                                                                    1.3s 
+ => CACHED [app-base 2/5] WORKDIR /app                                                               0.0s 
+ => CACHED [app-base 4/5] COPY app/spec ./spec                                                       0.0s 
+ => CACHED [app-base 5/5] COPY app/src ./src                                                         0.0s 
+ => CACHED [app-zip-creator 2/4] COPY app/spec ./spec                                                0.0s 
+ => CACHED [app-zip-creator 4/4] RUN apk add zip &&     zip -r /app.zip /app                         0.0s 
+ => CACHED [stage-6 2/3] COPY --from=app-zip-creator /app.zip /usr/share/nginx/html/assets/app.zip   0.0s 
+ => CACHED [base 2/4] WORKDIR /app                                                                   0.0s 
+ => CACHED [base 3/4] COPY requirements.txt .                                                        0.0s 
+ => CACHED [base 4/4] RUN pip install -r requirements.txt                                            0.0s 
+ => CACHED [build 1/2] COPY . .                                                                      0.0s 
+ => CACHED [build 2/2] RUN mkdocs build                                                              0.0s 
+ => CACHED [stage-6 3/3] COPY --from=build /app/site /usr/share/nginx/html                           0.0s 
+ => => exporting layers                                                                              0.0s 
+ => => writing image sha256:00a39dda56142379c50834145ad7282faaba7f757d5e6dc82c458c29c07c3435         0.1s 
+ => => naming to docker.io/library/docker101tutorial                                                 0.0s 
+PS C:\Users\ITOS\getting-started> docker run -d -p 80:80 --name docker-tutorial docker101tutorial
+docker: Error response from daemon: Conflict. The container name "/docker-tutorial" is already in use by c
+ontainer "e67201417a2c17f19e2f09a6bdc382d752e37c066fac4d07a5cc494c76e28ab5". You have to remove (or rename
+) that container to be able to reuse that name.
+See 'docker run --help'.
+PS C:\Users\ITOS\getting-started>
+PS C:\Users\ITOS\getting-started> docker stop e67201417a2c17f19e2f09a6bdc382d752e37c066fac4d07a5cc494c76e2
+8ab5
+e67201417a2c17f19e2f09a6bdc382d752e37c066fac4d07a5cc494c76e28ab5
+PS C:\Users\ITOS\getting-started> docker rm  e67201417a2c17f19e2f09a6bdc382d752e37c066fac4d07a5cc494c76e28
+ab5
+e67201417a2c17f19e2f09a6bdc382d752e37c066fac4d07a5cc494c76e28ab5
+PS C:\Users\ITOS\getting-started> docker run -d -p 80:80 --name docker-tutorial docker101tutorial
+beb044dd1c382379ec488a8f874b1488ff68c16354b900d90371a18f36472dc7
+PS C:\Users\ITOS\getting-started>
+PS C:\Users\ITOS\getting-started> docker stop
+"docker stop" requires at least 1 argument.
+See 'docker stop --help'.
+
+Usage:  docker stop [OPTIONS] CONTAINER [CONTAINER...]
+
+Stop one or more running containers
+PS C:\Users\ITOS\getting-started> docker stop e67201417a2c17f19e2f09a6bdc382d752e37c066fac4d07a5cc494c76e2
+8ab5
+Error response from daemon: No such container: e67201417a2c17f19e2f09a6bdc382d752e37c066fac4d07a5cc494c76e
+28ab5
+PS C:\Users\ITOS\getting-started>
+PS C:\Users\ITOS\getting-started>
+PS C:\Users\ITOS\getting-started> docker stop beb044dd1c382379ec488a8f874b1488ff68c16354b900d90371a18f3647
+2dc7
+beb044dd1c382379ec488a8f874b1488ff68c16354b900d90371a18f36472dc7
+PS C:\Users\ITOS\getting-started> docker rm  beb044dd1c382379ec488a8f874b1488ff68c16354b900d90371a18f36472
+beb044dd1c382379ec488a8f874b1488ff68c16354b900d90371a18f36472dc7
+En línea: 1 Carácter: 1
++ cd getting-started
++ ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\ITOS\g...getting-started:String) [Set-Location],  
+    ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+ 
+PS C:\Users\ITOS\getting-started> docker build -t docker101tutorial .
+[+] Building 22.3s (28/28) FINISHED
+ => [internal] load build definition from Dockerfile                                                 0.8s 
+ => => transferring dockerfile: 32B                                                                  0.0s 
+ => [internal] load .dockerignore                                                                    1.2s 
+ => => transferring context: 34B                                                                     0.0s 
+ => [internal] load metadata for docker.io/library/nginx:alpine                                      3.5s 
+ => [internal] load metadata for docker.io/library/python:alpine                                     3.9s 
+ => [internal] load metadata for docker.io/library/node:12-alpine                                    4.0s 
+ => [auth] library/nginx:pull token for registry-1.docker.io                                         0.0s 
+ => [auth] library/python:pull token for registry-1.docker.io                                        0.0s 
+ => [auth] library/node:pull token for registry-1.docker.io                                          0.0s 
+ => [app-base 1/5] FROM docker.io/library/node:12-alpine@sha256:d4b15b3d48f42059a15bd659be60afe2176  0.0s 
+ => [stage-6 1/3] FROM docker.io/library/nginx:alpine@sha256:455c39afebd4d98ef26dd70284aa86e6810b04  0.0s 
+ => [base 1/4] FROM docker.io/library/python:alpine@sha256:08b03b140633664ed4a55630de38f847d1905931  0.0s 
+ => [internal] load build context                                                                    1.3s 
+ => => transferring context: 12.18kB                                                                 0.1s 
+ => CACHED [base 2/4] WORKDIR /app                                                                   0.0s 
+ => CACHED [base 3/4] COPY requirements.txt .                                                        0.0s 
+ => CACHED [base 4/4] RUN pip install -r requirements.txt                                            0.0s 
+ => [build 1/2] COPY . .                                                                             2.9s 
+ => [build 2/2] RUN mkdocs build                                                                     6.7s 
+ => CACHED [app-base 2/5] WORKDIR /app                                                               0.0s 
+ => CACHED [app-base 3/5] COPY app/package.json app/yarn.lock ./                                     0.0s 
+ => CACHED [app-base 4/5] COPY app/spec ./spec                                                       0.0s 
+ => CACHED [app-base 5/5] COPY app/src ./src                                                         0.0s 
+ => CACHED [app-zip-creator 1/4] COPY app/package.json app/yarn.lock ./                              0.0s 
+ => CACHED [app-zip-creator 2/4] COPY app/spec ./spec                                                0.0s 
+ => CACHED [app-zip-creator 3/4] COPY app/src ./src                                                  0.0s 
+ => CACHED [app-zip-creator 4/4] RUN apk add zip &&     zip -r /app.zip /app                         0.0s 
+ => CACHED [stage-6 2/3] COPY --from=app-zip-creator /app.zip /usr/share/nginx/html/assets/app.zip   0.0s 
+ => [stage-6 3/3] COPY --from=build /app/site /usr/share/nginx/html                                  1.9s 
+ => exporting to image                                                                               2.3s 
+ => => exporting layers                                                                              1.4s 
+ => => writing image sha256:1b6a8287744dfa7f284f9fb8dae888926d29fa9b8b07c43e0be743f9a0b71429         0.1s 
+ => => naming to docker.io/library/docker101tutorial                                                 0.1s 
+PS C:\Users\ITOS\getting-started> docker run -d -p 80:80 --name docker-tutorial docker101tutorial
+d416b29144338d961710bffad73e05307b17678122986d814d739823e6c50563
+PS C:\Users\ITOS\getting-started> docker tag docker101tutorial diegooliveros/docker101tutorial
+PS C:\Users\ITOS\getting-started> docker push diegooliveros/docker101tutorial
+Using default tag: latest
+The push refers to repository [docker.io/diegooliveros/docker101tutorial]
+db9bbca52907: Pushed
+d58cadbb8bcc: Pushed
+bd502c2dee4c: Mounted from library/nginx
+9365b1fffb04: Mounted from library/nginx
+6636f46e559d: Mounted from library/nginx
+fcf860bf48b4: Mounted from library/nginx
+07099189e7ec: Mounted from library/nginx
+e5e13b0c77cb: Mounted from library/nginx
+latest: digest: sha256:511f0c8763066c0f8e05f5e7c1ea937841c66b6d030706130f7fba25e05e94ca size: 1990
+PS C:\Users\ITOS\getting-started> 
